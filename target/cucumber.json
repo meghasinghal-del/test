@@ -1,22 +1,22 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 20,
-        "name": "− Registeration functionality for testmeapp.",
+        "line": 5,
+        "name": "Successful Login with valid credentials",
         "description": "",
-        "id": "scenario-outline;−-registeration-functionality-for-testmeapp.;−;2",
+        "id": "login-test;successful-login-with-valid-credentials",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 96940641900,
+              "duration": 26982598688,
               "status": "passed"
             },
-            "line": 7,
-            "name": "User is on home page",
+            "line": 6,
+            "name": "user is on home page",
             "match": {
               "location": "Test_Steps01.user_is_on_home_page()"
             },
@@ -24,111 +24,82 @@
           },
           {
             "result": {
-              "duration": 37363105800,
+              "duration": 1375926651,
               "status": "passed"
             },
-            "line": 9,
-            "name": "User Navigate to SignUP Page",
+            "line": 7,
+            "name": "Click on Login link",
             "match": {
-              "location": "Test_Steps01.user_Navigate_to_SignUP_Page()"
+              "location": "Test_Steps01.click_on_Login_link()"
             },
-            "keyword": "Given "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 11563509600,
+              "duration": 2795794816,
               "status": "passed"
             },
-            "line": 11,
-            "name": "User enter Username as \"Raghav Gaurav\", Firstname as \"Raghav\", LastName as \"Gaurav\" and Password as \"Ragh12\", RePassword as \"Ragh12\", Gender as \"0\" , Email as \"Raghav@gmail.com\", MobileNumber as \"9988776655\", DOB as \"18/09/1996\", Address as \"Gorakhpur UP\", securityQuestion as \"What is your Nick Name?\", Answer as \"Ram\"",
+            "line": 8,
+            "name": "When enters email and password and click login",
             "match": {
-              "arguments": [
-                {
-                  "val": "Raghav Gaurav",
-                  "offset": 24
-                },
-                {
-                  "val": "Raghav",
-                  "offset": 54
-                },
-                {
-                  "val": "Gaurav",
-                  "offset": 76
-                },
-                {
-                  "val": "Ragh12",
-                  "offset": 101
-                },
-                {
-                  "val": "Ragh12",
-                  "offset": 125
-                },
-                {
-                  "val": "0",
-                  "offset": 145
-                },
-                {
-                  "val": "Raghav@gmail.com",
-                  "offset": 160
-                },
-                {
-                  "val": "9988776655",
-                  "offset": 196
-                },
-                {
-                  "val": "18/09/1996",
-                  "offset": 217
-                },
-                {
-                  "val": "Gorakhpur UP",
-                  "offset": 242
-                },
-                {
-                  "val": "What is your Nick Name?",
-                  "offset": 278
-                },
-                {
-                  "val": "Ram",
-                  "offset": 315
-                }
-              ],
-              "location": "Test_Steps01.user_enter_Username_as_Firstname_as_LastName_as_and_Password_as_RePassword_as_Gender_as_Email_as_MobileNumber_as_DOB_as_Address_as_securityQuestion_as_Answer_as(String,String,String,String,String,int,String,String,String,String,String,String)"
+              "location": "Test_Steps01.when_enters_email_and_password_and_click_login(DataTable)"
             },
-            "matchedColumns": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "password"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "pratiksha@test.com",
+                  "pratiksha"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "rick@test.com",
+                  "tester"
+                ],
+                "line": 13
+              }
             ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 582000,
+              "duration": 2523903865,
               "status": "passed"
             },
-            "line": 13,
-            "name": "Registration should be successful",
+            "line": 15,
+            "name": "Users logged in successfully",
             "match": {
-              "location": "Test_Steps01.registration_should_be_successful()"
+              "location": "Test_Steps01.users_logged_in_successfully()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@tag1"
           }
         ]
       }
     ],
-    "name": "scenario outline",
+    "name": "Login test",
     "description": "",
-    "id": "scenario-outline",
+    "id": "login-test",
     "keyword": "Feature",
-    "uri": "Register01.feature"
+    "uri": "Register01.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SmokeTest"
+      }
+    ]
   }
 ]

@@ -35,19 +35,24 @@ public class Test_Steps01 {
 	@When("^When enters email and password and click login$")
 	public void when_enters_email_and_password_and_click_login(DataTable arg1) throws Throwable {
 		
-		List<Map<String, String>> list = arg1.asMaps(String.class, String.class);
+	List<Map<String, String>> list = arg1.asMaps(String.class, String.class);
 		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i).get("email"));
+			
 			driver.findElement(By.name("Email")).sendKeys(list.get(i).get("email"));
-			System.out.println(list.get(i).get("password"));
+			
 			driver.findElement(By.name("Password")).sendKeys(list.get(i).get("password"));
-		
-	       driver.findElement(By.linkText("Log in")).click();
+		driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[5]/input")).click();
+v = v+ driver.findElements(By.linkText(list.get(i).get("email"))).size();
+			
+driver.findElement(By.linkText("Log out")).click();
+			driver.findElement(By.linkText("Log in")).click();
+			
 	}
 	}
 
 	@Then("^Users logged in successfully$")
 	public void users_logged_in_successfully() throws Throwable {
+		assertEquals(2, v);
 		 System.out.println(" login was successful ");
 
 	       driver.close(); 
